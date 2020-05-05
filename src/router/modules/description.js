@@ -1,0 +1,49 @@
+export default [
+    {
+        path:"/description",
+        name:"Description",
+        component:()=>import("@/views/Description.vue"),
+        meta: {
+            title: '个人中心',
+            authRequire:true
+        },
+        children:[
+            {
+                path:"aboutIBook",
+                name:"AboutIBook",
+                component:()=>import("@/components/description/AboutIBook.vue"),
+                meta:{
+                    title:"关于文轩",
+                    authRequire:true
+                }
+            },
+            {
+                path:"contact",
+                name:"Contact",
+                component:()=>import("@/components/description/Contact.vue"),
+                meta:{
+                    title:"联系文轩",
+                    authRequire:true
+                }
+            },
+            {
+                path:"cooperative",
+                name:"Cooperative",
+                component:()=>import("@/components/description/Cooperative.vue"),
+                meta:{
+                    title:"合作伙伴",
+                    authRequire:true
+                }
+            },
+            {
+                path:"join",
+                name:"Join",
+                component:()=>import("@/components/description/Join.vue"),
+                meta:{
+                    title:"加入文轩",
+                    authRequire:true
+                }
+            },
+        ]
+    }
+]
